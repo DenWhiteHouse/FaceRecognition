@@ -8,16 +8,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.facerecognition.R
-import com.example.facerecognition.databinding.TitleFragmentBinding
+import com.example.facerecognition.databinding.CameraFragmentBinding
 
-class TitleFragment : Fragment(){
+class CameraFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val binding: TitleFragmentBinding = DataBindingUtil.inflate(
-            inflater, R.layout.title_fragment,container,false)
-        binding.titleButton.setOnClickListener{
-            view : View ->
-            arrayOf(view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToCameraFragment2()))        }
+        val binding: CameraFragmentBinding = DataBindingUtil.inflate(
+            inflater, R.layout.camera_fragment,container,false)
         return binding.root
     }
 }
